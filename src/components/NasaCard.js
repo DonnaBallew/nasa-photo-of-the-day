@@ -5,12 +5,12 @@ const NasaCard = (props) => {
 
   return (
     <div className="nasa-card">
-      <h1></h1>
-      <img />
-      <p></p>
-      <p></p>
+      <h1> {props.title}</h1>
+      <img src={props.photo} alt="random photos from NASA" />
+      <p>Photo shot by: {props.copywright}</p>
+      <p>Date: {props.date}</p>
       <div className="overlay">
-        <p></p>
+        <p>PHOTO DESCRIPTION: {props.explanation}</p>
       </div>
     </div>
   );
