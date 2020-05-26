@@ -1,18 +1,66 @@
 import React from "react";
+import styled from "styled-components";
+
+const Card = styled.div`
+  max-width: 500px;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  &:hover .overlay {
+    bottom: 0;
+    height: 100%;
+  }
+`;
+
+const Title = styled.h1`
+  padding: 0 20px 0 20px;
+  color: #444343;
+  text-align: center;
+`;
+
+const Img = styled.img`
+  display: block;
+  object-fit: contain;
+  max-width: 500px;
+`;
+
+const Info = styled.h4`
+  color: #444343;
+  margin: 15px;
+`;
+const Overlay = styled.div`
+  position: absolute;
+  bottom: 100%;
+
+  background-color: #444343;
+  overflow: hidden;
+  width: 500px;
+  height: 0;
+  transition: 0.7s ease;
+`;
+
+const Desc = styled.p`
+  text-align: justify;
+  margin: 50px;
+  color: white;
+  font-size: 1.3rem;
+  position: absolute;
+  overflow: hidden;
+`;
 
 const NasaCard = (props) => {
   //if (!props.photo) return <h3>Loading...<h3>;
 
   return (
-    <div className="nasa-card">
-      <h1> {props.title}</h1>
-      <img src={props.photo} alt="random photos from NASA" />
-      <p>Photo shot by: {props.copywright}</p>
-      <p>Date: {props.date}</p>
-      <div className="description">
-        <p>PHOTO DESCRIPTION: {props.explanation}</p>
-      </div>
-    </div>
+    <Card className="nasa-card">
+      <Title>{props.title}</Title>
+      <Img src={props.photo} alt="random photos from Nasa" />
+      <Info>Photo Taken By: {props.copyright}</Info>
+      <Info>Date: {props.date}</Info>
+      <Overlay className="overlay">
+        <Desc>PHOTO DESCRIPTION: {props.explanation}</Desc>
+      </Overlay>
+    </Card>
   );
 };
 
