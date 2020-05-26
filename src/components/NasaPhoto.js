@@ -21,7 +21,13 @@ export default function NasaPhoto(props) {
 
   return (
     <div className="info">
-      <NasaCard />
+      <NasaCard
+        title={info.title}
+        photo={info.url}
+        copyright={info.copyright}
+        date={info.date}
+        explanation={info.explanation}
+      />
     </div>
   );
 }
