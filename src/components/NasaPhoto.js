@@ -20,8 +20,8 @@ export default function NasaPhoto(props) {
   }, []);
 
   return (
-    <Container className="info">
+    <div className="info">
       <NasaCard />
-    </Container>
+    </div>
   );
 }
