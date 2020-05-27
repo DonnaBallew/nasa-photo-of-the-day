@@ -15,10 +15,10 @@ export default function NasaPhoto(props) {
   useEffect(() => {
     axios
       .get(
-        "https://api.nasa.gov/planetary/apod?api_key=Cq2LeY2J2jVpRURbwuqcMMbyJQbCKyCxynPr6pPo"
+        `https://api.nasa.gov/planetary/apod?api_key=Cq2LeY2J2jVpRURbwuqcMMbyJQbCKyCxynPr6pPo`
       )
       .then((res) => {
-        console.log(res);
+        console.log("Response", res);
         setInfo(res.data);
       })
       .catch((error) => {

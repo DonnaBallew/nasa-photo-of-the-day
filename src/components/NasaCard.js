@@ -57,6 +57,7 @@ const NasaCard = (props) => {
       <Img src={props.photo} alt="random photos from Nasa" />
       <Info>Photo Taken By: {props.copyright}</Info>
       <Info>Date: {props.date}</Info>
+
       <Overlay className="overlay">
         <Desc>PHOTO DESCRIPTION: {props.explanation}</Desc>
       </Overlay>
