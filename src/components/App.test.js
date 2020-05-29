@@ -9,3 +9,11 @@ test("First snapshot test", () => {
 
   expect(tree).toMatchSnapshot();
 });
+
+//installed Jest - Snapshot
+//at the terminal, I installed 'npm install react-test-renderer
+//created an 'App.test.js folder and added code to 'test' App.js
+//at the terminal type 'npm test'
+
+//NOTE: I installed 'npm install jest' by mistake and attempted to uninstall; however,
+//I think it's causing an error when the test in ran.
